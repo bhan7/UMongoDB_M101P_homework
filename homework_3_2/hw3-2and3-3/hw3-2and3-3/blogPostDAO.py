@@ -21,6 +21,7 @@ __author__ = 'aje'
 import sys
 import re
 import datetime
+from pymongo import DESCENDING
 
 
 
@@ -55,6 +56,7 @@ class BlogPostDAO:
         # now insert the post
         try:
             # XXX HW 3.2 Work Here to insert the post
+            self.posts.insert(post)
             print "Inserting the post"
         except:
             print "Error inserting post"
@@ -68,6 +70,7 @@ class BlogPostDAO:
         cursor = []         # Placeholder so blog compiles before you make your changes
 
         # XXX HW 3.2 Work here to get the posts
+        cursor = self.posts.find().sort([("date", DESCENDING)]).limit(num_posts)
 
         l = []
 
