@@ -6,3 +6,4 @@ Chapter 1: Introduction
 Chapter 2: CRUD - Create, Read, Update and Delete  
 Chapter 3: Schema Design  
 Chapter 4: Performance  
+Chapter 5: Aggregation Framework  
